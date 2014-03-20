@@ -23,11 +23,6 @@
   <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
   <style type="text/css">
     
-    .deck-container {
-    margin-top: 20px;
-    }
-
-
   </style>
 
   <script type="text/javascript">
@@ -86,13 +81,13 @@
     <!-- SLIDE: Course Outline -->
     <article class='slide slide-list'>
       <h2>Course Outline</h2>
-      <h3 style="margin-top: 1em;">First portion (usually completed before lunch):</h3>
+      <h3 style="margin-top: 1em;">Morning</h3>
       <ul>
         <li>Intro to HTML</li>
         <li>Write the HTML for your project</li>
         <li>Intro to CSS</li>
       </ul>
-      <h3 style="margin-top: 1em;">Second portion (usually completed after lunch)</h3>
+      <h3 style="margin-top: 1em;">Afternoon</h3>
       <ul>
         <li>More CSS</li>
         <li>Final touches</li>
@@ -107,7 +102,7 @@
       <ul>
         <li><strong>Sublime Text</strong> (<a href="http://www.sublimetext.com/">link</a>) - a popular text editor that highlights your code and has other helpful features.</li>
         <li><strong>Google Chrome</strong> (<a href="https://www.google.com/intl/en/chrome/browser/">link</a>) - Choose a modern web browser that has good development tools to help make building web pages easier. <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a> is a good option, too! You'll also want to make one of these modern browsers your <em>default</em> browser. <a href="https://support.google.com/chrome/answer/95417?hl=en">Here are the instructions</a>.</li>
-        <li><strong>Today's slides and files</strong> (<a href="https://github.com/tessa-lt/LLC-HTML-CSS">link</a>). You'll see a "Download Zip" button on the bottom right of the page. Click it! To open the slides, unzip the folder (on Windows, right click and select "Extract All"). Right click on "index.html" or "index" and "Open in Chrome".</li>
+        <li><strong>Today's slides and files</strong> (<a href="https://github.com/ssayan/LLC-HTML-CSS">link</a>). You'll see a "Download Zip" button on the bottom right of the page. Click it! To open the slides, unzip the folder (on Windows, right click and select "Extract All"). Right click on "index.html" or "index" and "Open in Chrome".</li>
       </ul>
     </article>
 
@@ -119,13 +114,34 @@
     <!-- SLIDE: Opening HTML files in your browser, Part 2 -->
     <article class='slide slide-list'>
       <h2>First, what is a browser?</h2>
-      <p>The browser's main functionality is to present the "web resource" you choose, by requesting it from the server and displaying it in the browser window. The "web resource" is usually an HTML document, but may also be a PDF, image, or other type.<p>
+      <!-- <img src="assets/server.jpg"> -->
+      <p>The main function of a browser is to retrieve files (or 'resources') from the internet, requesting them from a specified server and presenting them in the appropriate manner, depending on their media type. Common browsers include Chrome, Firefox, Safari, and Internet Explorer</p> 
+      <p>Browsers do different things with different kinds of files. For instance, images might get displayed, while zip files get downloaded.</p>
+      <p>One kind of file, called <b>HTML</b>, is special.</p>
     </article>
+
+    <article class='slide slide-list'>
+      <h2>What is an HTML document?</h2>
+      <p>When your browser encounters an HTML document, it kicks into a special mode. The browser doesn't just spit out the text of an HTML document on the page — HTML files are written in a type of code — called <em>HyperText Markup Language</em>. HTML describes two main things:</p>
+      <ol>
+        <li>The basic structure and content of a page</li>
+        <li>All the images, scripts, and other doodads that a page is going to need to function properly</li>
+      </ol>
+      <p>The browser interprets that code, figures out how the page is going to look, and poof: you get the result on-screen.</p>
+      <p><strong>Every webpage on the internet is made from HTML.</strong></p>
+    </article>   
+
+    <article class='slide slide-list'>
+      <h2>What is an HTML document?</h2>
+      <p>It's important to know: HTML only describes what content will be on a page. We have to pair HTML with other tools to get more complex things done.</p>
+      <p>For instance, HTML has very little ability to actually style the page. Things like fonts, colors, and margins are all described in CSS. (We'll get into that in a bit!)</p>
+    </article>    
+
 
     <!-- SLIDE: Opening HTML files in your browser, Part 3 -->
     <article class='slide slide-list'>
-      <h2>What is an HTML document?</h2>
-      <p>We'll get into this in more detail shortly. For now, let's check out an example. Go to <a href="http://ladieslearningcode.com">http://ladieslearningcode.com</a>. Right-click and select "View Page Source". That's HTML.</p>
+      <h2>Let's check out an example of HTML.</h2>
+      <p>Go to <a href="http://ladieslearningcode.com">http://ladieslearningcode.com</a>. Right-click and select "View Page Source". That's HTML.</p>
       <p>We'll learn to write our own HTML today. For now, let's learn to open an HTML document (like the ones we'll create later) in our browser.</p>
       <ol>
         <li>Open Sublime Text and go to "File -> Open".</li>
@@ -160,11 +176,6 @@
       </ol>
     </article>
 
-    <!-- SLIDE: You won't break anything -->
-    <article class='slide slide-list'>
-      <h2>A note: don't be scared about breaking anything or doing something wrong. The stuff we're doing today is what computers were designed to do! Feel free to play around, take risks and make mistakes. That's the best way to learn.</h2>
-    </article>
-
     <!-- new slide -->
     <article class='slide slide-subhead'>
       <h1>What are HTML &#38; CSS?</h1>
@@ -177,12 +188,12 @@
 
     <!-- new slide -->
     <article class='slide slide-list'>
-      <h2>HTML (HyperText Markup Language) is what webpages are made out of.</h2>
+      <h2>HTML is what webpages are made out of.</h2>
       <p>We use HTML to describe each part of a webpage is to the browser, so that our content is displayed properly. We help our browsers to understand how we want things displayed by using tags. Here are a few examples of tags that you've probably seen before:</p>
       <ul>
-        <li>&#60;h1&#62; and &#60;/h1&#62;</li>
-        <li>&#60;p&#62; and &#60;/p&#62;</li>
-        <li>&#60;strong&#62; and &#60;/strong&#62;</li>
+        <li>&#60;h1&#62; This is a Headline &#60;/h1&#62;</li>
+        <li>&#60;p&#62; This is a paragraph of text &#60;/p&#62;</li>
+        <li>&#60;em&#62; This text is <em>emphasized</em> &#60;/em&#62;</li>
       </ul>
       <p>To create an HTML file, you need to have .html at the end (sort of like how you need .pdf at the end of PDF documents).</p>
     </article>
@@ -205,11 +216,11 @@
     <article class='slide slide-list'>
       <h2>The Nuts and Bolts of HTML</h2>
       <p>When we write HTML, we create HTML Elements by wrapping our content in tags. These tags describe the content that is inside of them, NOT what they look like. We use different kinds of tags to create multiple elements and all together they make up something called our HTML Document.</p>
-      <p>It is important to understand that HTML has very little to do with the style of your website or the <em>look</em> of the content - that is what CSS is for.</p>
+      <p>Again: It is important to understand that HTML has very little to do with the style of your website or the <em>look</em> of the content - that is what CSS is for.</p>
     </article>
 
     <!-- new slide -->
-    <article class='slide slide-list'>
+<!--     <article class='slide slide-list'>
       <h2>Tags that you should no longer use!</h2>
       <p>It’s very important to create semantic, clean and valid markup before doing anything else. When we write HTML, we are only describing the content - not defining how out website looks (that's what CSS is for).</p>
       <p>Here are a few examples of tags you should NEVER use:</p>
@@ -222,7 +233,7 @@
         <li>&#60;center&#62;I'm centered text!&#60;/center&#62;</li>
       </ul>
       <h3>Please don't use any of these tags ever again!</h3>
-    </article>
+    </article> -->
 
     <!-- new slide -->
     <article class='slide slide-subhead'>
@@ -233,16 +244,34 @@
     <!-- new slide -->
     <article class='slide slide-list'>
       <h2>What is CSS?</h2>
-      <p>CSS (Cascading Style Sheets) is what makes websites look nice.</p>
+      <p>CSS (Cascading Style Sheets) are what makes websites look nice.</p>
       <p>While HTML tells the browser what different parts of the page are, CSS says what those pieces should look like.</p> 
-      <p>For example, p means paragraph in HTML. If we wanted to make all of our paragraphs red and underlined, we'd do something like:</p>
-<pre><code class="language-css">
-p {
-  color: red;
-  text-decoration: underline;
-}
-</code></pre>
     </article>
+
+    <!-- SLIDE: Websites without CSS -->
+    <article class='slide slide-list'>
+      <h2>Without CSS...</h2>
+      <img src="assets/llc_site_without_css.jpg">
+    </article>
+
+    <!-- SLIDE: Websites with CSS -->
+    <article class='slide slide-list'>
+      <h2>With CSS...</h2>
+      <img src="assets/llc_site_with_css.jpg">
+    </article>
+
+    <!-- new slide -->
+    <article class='slide slide-list'>
+      <h2>What is CSS? (Cont.)</h2>
+      <p>HTML and CSS are sort of like languages, but they're DIFFERENT languages. Just like French or Japanese, they each have their own set of rules. It takes time to learn these languages. Don't worry if you don't get it all right away.</p>
+      <p>For example, p means paragraph in HTML. If we wanted to make all of our paragraphs red and underlined in CSS, we'd do something like:</p>
+      <pre><code class="language-css">
+      p {
+        color: red;
+        text-decoration: underline;
+      }
+      </code></pre>      
+    </article>    
 
     <!-- new slide -->
     <article class='slide slide-list'>
@@ -273,31 +302,11 @@ p {
       <p>HTML + CSS = website</p>
     </article>
 
-    <!-- new slide -->
-    <article class='slide slide-list'>
-      <h2>A note about HTML and CSS...</h2>
-      <p>HTML and CSS are sort of like languages, but they're DIFFERENT languages. Just like French or Italian, they each have their own set of rules. It takes time to learn these languages. Don't worry if you don't get it all right away.</p>
-    </article>
-
-    <!-- SLIDE: Websites without CSS -->
-    <article class='slide slide-list'>
-      <h2>Websites without CSS...</h2>
-      <p>This:</p>
-      <img src="assets/llc_site_with_css.jpg">
-    </article>
-
-    <!-- SLIDE: Websites without CSS -->
-    <article class='slide slide-list'>
-      <h2>Websites without CSS...</h2>
-      <p>Becomes this:</p>
-      <img src="assets/llc_site_without_css.jpg">
-    </article>
-
     <!-- SLIDE: What is a website? -->
-    <article class='slide slide-subhead'>
+<!--     <article class='slide slide-subhead'>
       <h1>Why is that again?</h1>
       <h2>Because HTML defines content, and CSS defines the look and layout (it makes the web look nice).</h2>
-    </article>
+    </article> -->
 
     <!-- SLIDE: What is a website? -->
     <article class='slide slide-subhead'>
@@ -333,6 +342,16 @@ p {
 &lt;/html&gt;
 </code>
 </pre>   
+    </article>
+
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>HTML tags</h2>
+      <p>Some tags are what is called 'self-closing'. Elements like images or horizontal rules don't have content so they don't need a 'twin' closing tag on the back end.</p>
+      <p class="centered" style="font-size: 3em;"><code>&lt;img src=""&gt;</code></p> 
+      <p class="centered" style="font-size: 3em;"><code>&lt;hr&gt;</code></p> 
+      <p class="centered" style="font-size: 3em;"><code>&lt;br&gt;</code></p> 
     </article>
 
    <!-- SLIDE: HTML -->
@@ -418,7 +437,7 @@ p {
     <!-- SLIDE: HTML -->
     <article class='slide slide-list'>
       <h2>Adding images</h2>
-      <p>Let's learn to add images to our webpages. Note that image tags are unique in that they are "self-closing" - there is no closing tag.</p>
+      <p>Let's learn to add images to our webpages. Note that image tags are self-closing - there is no closing tag!</p>
       <p>Let's start by adding an image that is hosted online. Here's the code:</p>
       <pre><code class="language-markup">
         &lt;img src="http://placekitten.com/g/200/200"&gt;
@@ -459,10 +478,10 @@ p {
       <ul>
         <li>Using a large image or photograph: choose jpg</li>
         <li>For icons, logos, text or anything that requires transparency: choose png</li>
-        <li>For animations, especially of cats: choose gif (this is a joke)</li>
+        <li>For animations: choose gif</li>
       </ul>
       <div class="centered">
-        <img src="http://1-ps.googleusercontent.com/h/www.catgifpage.com/gifs/182.gif.pagespeed.ce.S3pBqCa_-u.gif">
+        <img src="assets/la0eW.gif">
       </div>
     </article>
 
@@ -1092,7 +1111,7 @@ section.banner {
     <!-- SLIDE CSS Child Selectors -->
     <article class="slide slide-list">
       <h2>CSS Child Selectors</h2>
-      <p>>You can write a <strong>child selector</strong> to select only those tags which are children of another tag.</p>
+      <p>You can write a <strong>child selector</strong> to select only those tags which are children of another tag.</p>
       <p>We add a space between the parent and the child selector to specify:</p>
 <pre><code class="language-css">
 section img {}  
